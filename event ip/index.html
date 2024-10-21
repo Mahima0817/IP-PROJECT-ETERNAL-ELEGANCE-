@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Elegance - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #007bff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0056b3 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-background-event.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            z-index: 1;
+        }
+
+        .hero .btn-primary {
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            z-index: 1;
+        }
+
+        /* Services Section */
+        #services {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        #services h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .service-card-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Glassmorphism Effect */
+        .service-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            padding: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            height: 100%;
+            text-align: center;
+            width: 30%;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .service-card img {
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 50px;
+            padding: 10px 30px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Eternal Elegance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addons.html">Addons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a> <!-- Added Login Link -->
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Make Every Moment Special with Eternal Elegance</h2>
+            <p>Plan your dream event with our exceptional services for weddings, birthdays, ceremonies, and more.</p>
+            <a href="#services" class="btn btn-primary mt-4">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Event Services</h2>
+            <div class="row service-card-container">
+                <div class="service-card">
+                    <img src="birthday.png" alt="Birthday Bookings" class="card-img-top">
+                    <h3>Birthday Bookings</h3>
+                    <p>Make your birthday unforgettable with our personalized services.</p>
+                    <a href="birthday.html" class="btn btn-secondary mt-3">Book Now</a>
+                </div>
+                <div class="service-card">
+                    <img src="wedding.png" alt="Wedding Bookings" class="card-img-top">
+                    <h3>Wedding Bookings</h3>
+                    <p>Turn your wedding day into a fairy tale with our expert planning.</p>
+                    <a href="wedding.html" class="btn btn-secondary mt-3">Book Now</a>
+                </div>
+                <div class="service-card">
+                    <img src="ceremony.png" alt="Ceremonies" class="card-img-top">
+                    <h3>Ceremonies</h3>
+                    <p>From engagements to anniversaries, we’ve got all your ceremonies covered.</p>
+                    <a href="ceremonies.html" class="btn btn-secondary mt-3">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Eternal Elegance. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

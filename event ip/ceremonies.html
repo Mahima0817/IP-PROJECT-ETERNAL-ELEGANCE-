@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceremonies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(mi.jpeg); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps the background in place when scrolling */
+            color: white; /* Optional: Changes text color to ensure readability */
+        }
+
+        .container {
+            background-color:rgba(255,255,255,0.3) /* Adds a semi-transparent background to form */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Ceremony Booking</h1>
+        <p>We can plan any ceremony for you. Fill out the details below:</p>
+        <form action="submit_ceremonies.php" method="POST">
+            <div class="mb-3">
+                <label for="type" class="form-label">Type of Ceremony</label>
+                <input type="text" class="form-control" name="type">
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" name="date">
+            </div>
+            <div class="mb-3">
+                <label for="venue" class="form-label">Preferred Venue</label>
+                <input type="text" class="form-control" name="venue">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

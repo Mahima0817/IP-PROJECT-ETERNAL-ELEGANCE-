@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Booking Success</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            overflow: hidden; /* Prevent scrollbars during animation */
+            height: 100vh;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 9999; /* Ensure overlay is on top */
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .message {
+            font-size: 2rem;
+            color: #28a745; /* Success message color */
+            animation: slideUp 1s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .revisit {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #007bff; /* Catchy phrase color */
+            animation: slideUp 1s ease forwards;
+            animation-delay: 0.5s; /* Delay to appear after the message */
+        }
+
+        /* Add additional styles as needed */
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="message">Booking Successfully Created!</div>
+        <div class="revisit">Revisit our site for more functions!</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Function to create confetti effect
+        function launchConfetti() {
+            const duration = 5 * 1000; // Duration in milliseconds
+            const animationEnd = Date.now() + duration;
+
+            const interval = setInterval(() => {
+                const timeLeft = animationEnd - Date.now();
+
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: {
+                        x: Math.random(),
+                        // Randomize vertical position
+                        y: Math.random() < 0.5 ? 0 : 1
+                    }
+                });
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                }
+            }, 250); // Change to adjust frequency of confetti
+        }
+
+        // Trigger confetti on page load
+        window.onload = () => {
+            launchConfetti();
+            document.getElementById('overlay').style.opacity = 1;
+        };
+    </script>
+</body>
+</html>

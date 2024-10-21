@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('wed.webp');
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+/* Hero Section with Placeholder for Background Image */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-box {
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #02b9e7;
+    color: #f66767;
+    padding: 2rem;
+}
